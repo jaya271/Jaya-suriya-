@@ -1,0 +1,51 @@
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    document.querySelector(targetId).scrollIntoView({ behavior: 'smooth' });
+
+    // Close mobile menu after click
+    document.querySelector('.nav-links').classList.remove('show');
+  });
+});
+
+// Fade-in animation on scroll
+const elements = document.querySelectorAll('.section, .sidebar, .main');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));
+
+// Hamburger menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+// Highlight active section in navbar while scrolling
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(sec => {
+    const top = sec.offsetTop - 100;
+    if (pageYOffset >= top) current = sec.getAttribute("id");
+  });
+  navItems.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === "#" + current) {
+      a.classList.add("active");
+    }
+  });
+});
