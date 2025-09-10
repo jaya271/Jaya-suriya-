@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jaya Suriya — Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-brand">Jaya Suriya</div>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <aside class="sidebar fade-in" aria-label="profile sidebar">
+      <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=60" alt="Jaya Suriya avatar">
+      <h1>Jaya Suriya</h1>
+      <div class="role">Web Developer • Frontend Engineer</div>
+      <div class="contact">
+        <p><b>Email:</b> <a href="mailto:rjayasuriya389@gmail.com">rjayasuriya389@gmail.com</a></p>
+        <p><b>Phone:</b> <a href="tel:+916382411508">+91 63824 11508</a></p>
+        <p><b>Location:</b> India</p>
+      </div>
+    </aside>
+
+    <main class="main fade-in">
+      <section class="section" id="about">
+        <h3>About</h3>
+        <p>I am Jaya Suriya, a professional web developer skilled in HTML, CSS, and JavaScript. I specialize in responsive, accessible web design and frontend engineering.</p>
+      </section>
+
+      <section class="section" id="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive Design</li>
+          <li>Accessibility (a11y)</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </section>
+
+      <section class="section" id="projects">
+        <h3>Projects</h3>
+        <p>Portfolio and UI component projects available on GitHub.</p>
+      </section>
+
+      <section class="section" id="contact">
+        <h3>Contact</h3>
+        <p>Feel free to reach out by email or phone.</p>
+      </section>
+
+      <footer>
+        <p>© 2025 Jaya Suriya</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
